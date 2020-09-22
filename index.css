@@ -9,10 +9,11 @@ body{
 nav {
     background-color: red;
 }
+/* 
 figure {
-
+ border: 1px solid rgb(95, 0, 139); 
 }
-
+*/
 
 figure img {
     width: 200px;
