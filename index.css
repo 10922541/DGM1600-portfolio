@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #d3d3d3;
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
-nav {
+#navbar {
     display: flex;
     justify-content: flex-end;
     background-color: red;
@@ -14,8 +16,32 @@ nav {
 .nav-list {
     display: flex;
     list-style-type: none;
+    margin-right: 2rem;
+}
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-list a:hover{
+    background: #45567d;
+}
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(33deg, #6c8cac 0%, #190330 100%);
+    color: #ffffff;
+    }
+figure img {
+    width: 15rem;
 }
 
-figure img {
-    width: 200px;
+h1 {
+    font-size: 3rem;
 }
