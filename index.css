@@ -35,7 +35,7 @@ html {
     align-items: center;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(33deg, #6c8cac 0%, #190330 100%);
+    background-image: linear-gradient(33deg, #535658 0%, #0d0e1b 100%);
     color: #ffffff;
     }
 figure img {
@@ -43,5 +43,5 @@ figure img {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 5rem;
 }
