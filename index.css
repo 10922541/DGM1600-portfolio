@@ -7,11 +7,18 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
+a{
+    text-decoration: none;
+    color: #f0f0f0;
+}
 
 #navbar {
     display: flex;
     justify-content: flex-end;
     background-color: red;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 .nav-list {
     display: flex;
@@ -35,13 +42,66 @@ html {
     align-items: center;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(33deg, #535658 0%, #0d0e1b 100%);
+    background-image: linear-gradient(33deg, #383838 0%, #000000 100%);
     color: #ffffff;
     }
+#welcome-section h2 {
+    color: red;
+    font-size: 3rem;
+}
+.projects-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #45567d;
+    height: 55vh;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: #303841;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+    transform: translateY(5px);
+}
+
 figure img {
     width: 15rem;
 }
 
 h1 {
     font-size: 5rem;
+    color: #fff;
 }
