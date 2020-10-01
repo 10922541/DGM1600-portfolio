@@ -98,10 +98,23 @@ a{
 }
 
 figure img {
-    width: 15rem;
+    width: 35rem;
 }
 
 h1 {
     font-size: 5rem;
     color: #fff;
+}
+@media screen and (max-width: 28.75em) {
+    .contact-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    #welcome-section {
+        background-image: linear-gradient(213deg, #585858 12%, #ffffff 100%);
+        text-align: center;
+    }
+    #welcome-section h1 {
+        color: rgb(32, 32, 32);
+    }
 }
