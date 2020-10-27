@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure img {
+    max-height: 11rem;
+}
