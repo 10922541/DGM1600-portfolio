@@ -1,15 +1,26 @@
 :root {
     margin: 0;
     box-sizing: border-box;
+}
 
+.container {
+    display: flex;
+}
+
+.main {
+    margin: 8rem;
 }
 
 header, footer {
     display: flex;
     justify-content: center;
     font-size: larger;
-
 }
+
+.box {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     font-size: large;
@@ -17,4 +28,5 @@ a {
 
 li {
     list-style-type: none;
+    color: rgb(255, 208, 0);
 }
