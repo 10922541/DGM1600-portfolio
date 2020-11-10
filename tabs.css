@@ -1,0 +1,13 @@
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.mainFrame {
+    height: 100vh;
+}
+.tabs {
+    color: red;
+}

@@ -1,5 +1,5 @@
 import { starships } from '../data/starships.js'
-import { removeChildren, getLastNumber } from '../utils/index.js'
+import { removeChildren, getLastNumber, addStarField } from '../utils/index.js'
 
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
@@ -44,35 +44,10 @@ function populateShipView(shipData) {
     shipImage.addEventListener('error', () => {
         shipImage.hidden = true
         dialog.classList.toggle("is-active")
-    }) 
+    }) // genius level 9001
     shipView.appendChild(shipImage)
 }
 
 populateNav(starships)
 
-function addStarField(element, numStars) {
-    element.style.setProperty('background-color', 'black')
-    element.style.setProperty('color', 'rgb(255, 208, 0)')
-    for (let i = 0; i < numStars; i++) {
-        let star = document.createElement('div')
-        star.style.setProperty('position', 'absolute')
-        star.style.setProperty('width', '2px')
-        star.style.setProperty('height', '2px')
-        star.style.setProperty('background-color', 'white')
-        let xy = getRandomPosition()
-        star.style.left = `${xy[0]}px`
-        star.style.top = `${xy[1]}px `
-        element.appendChild(star)
-    }
-}
-
-function getRandomPosition() {
-    let y = document.body.scrollHeight
-    let x = document.body.scrollWidth
-    let randomY = Math.floor(Math.random() * y)
-    let randomX = Math.floor(Math.random() * x)
-    return [randomX, randomY]
-}
-
-addStarField(document.querySelector('body'), 1000)
-
+addStarField(document.querySelector('.mainContainer'), 1000)
