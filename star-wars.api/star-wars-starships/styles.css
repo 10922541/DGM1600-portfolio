@@ -5,16 +5,18 @@
 
 .mainContainer {
     display: flex;
-}
+    padding: 4rem;
 
-.main {
-    margin: 8rem;
 }
 
 header, footer {
     display: flex;
     justify-content: center;
     font-size: larger;
+    background-color: rgb(0, 0, 0);
+    font-size: 1.75rem;
+    color: white;
+    text-decoration: underline;
 }
 
 .box {
@@ -29,4 +31,10 @@ a {
 li {
     list-style-type: none;
     color: rgb(255, 208, 0);
+}
+img {
+   margin-left: 20rem;
+   margin-top: 10rem;
+   padding: 2rem;
+    border: 1.5rem double rgb(255, 0, 0);
 }

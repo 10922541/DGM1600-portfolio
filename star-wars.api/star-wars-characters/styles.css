@@ -1,6 +1,11 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: "open sans", sans-serif;
+}
+
+body {
+    background-color: rgb(38, 36, 46);
 }
 
 .mainHeader {
@@ -13,7 +18,27 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+figcaption {
+    background-color: rgb(14, 15, 22);
+    text-align: center;
+    max-width: 8rem;
+    color: rgb(182, 170, 170);
+    border: ridge rgb(31, 29, 39);
+    margin-bottom: 1rem;
+
+}
 
 figure img {
     max-height: 11rem;
+    border: double rgb(216, 186, 16);
+    border-radius: 0% 20%;
+    margin: .25rem;
+}
+
+button {
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: rgb(206, 206, 206);
 }

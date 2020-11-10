@@ -1,5 +1,5 @@
 import { films } from '../data/films.js'
-import { getLastNumber } from '../utils/index.js'
+import { getLastNumber } from '../../utils/index.js'
 
 const main = document.querySelector('main')
 
@@ -23,4 +23,5 @@ for (let i = 0; i < 7; i++) {
 
     main.appendChild(figure)
 }
-  
+
+
