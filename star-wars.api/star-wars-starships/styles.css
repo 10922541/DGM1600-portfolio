@@ -33,8 +33,8 @@ li {
     color: rgb(255, 208, 0);
 }
 img {
-   margin-left: 20rem;
-   margin-top: 10rem;
-   padding: 2rem;
+position: relative;
+z-index: 1;
     border: 1.5rem double rgb(255, 0, 0);
+
 }
