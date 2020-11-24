@@ -17,11 +17,11 @@ header {
 }
 
 .scene {
-    width: 200px;
-    height: 260px;
-    border: 1px solid #CCC;
+    width: 220px;
+    height: 285px;
     margin: 10px;
     perspective: 600px;
+  
   }
 
   .card {
@@ -34,21 +34,33 @@ header {
   }
 
   .card__face {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border-radius: 20px;
+    border: 10px solid rgb(32, 14, 110);
+    
 }
 
 .card__face--front {
-background: red;
+background: rgb(73, 38, 230);
+color: white;
+font: 2rem 'Bangers', cursive, sans-serif;
 }
 
 .card__face--back {
-background: blue;
+background: rgb(32, 14, 110);
 transform: rotateY(180deg);
 }
 
   .card.is-flipped {
       transform: rotateY(180deg);
   }
+
+img { 
+padding-bottom: 20px;
+}
