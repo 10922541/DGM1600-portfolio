@@ -1,3 +1,11 @@
+/* ask thor about 
+limiting grid 
+getting all types
+aligning types to the left 
+weird space under type names
+*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,27 +21,28 @@ header {
 .pokemonGrid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* ask thor about limiting grid to 5 colums */
 }
 
 .scene {
-    width: 220px;
-    height: 285px;
+    width: 250px;
+    height: 360px;
     margin: 10px;
     perspective: 600px;
   
   }
 
-  .card {
-      width: 100%;
-      height: 100%;
-      transition: transform 680ms;
-      transform-style: preserve-3d;
-      cursor: pointer;
-      position: relative;
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 680ms;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
   }
 
-  .card__face {
+.card__face {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -42,25 +51,44 @@ header {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 20px;
-    border: 10px solid rgb(32, 14, 110);
-    
+    border: 8px solid rgb(2247, 206, 5);  
 }
 
 .card__face--front {
-background: rgb(73, 38, 230);
-color: white;
-font: 2rem 'Bangers', cursive, sans-serif;
+    padding-top: 20px;
+    background: #31b0eb;
+    font: 2.2rem 'Bangers', cursive, sans-serif;
+}
+
+.card__face--front > h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;  
+    letter-spacing: .2rem;
+    /* background: linear-gradient(90deg,rgb(206, 13, 13), rgb(196, 149, 21), rgb(206, 13, 13));
+    box-shadow: 0 0 1.5rem black; */
+}
+
+.card__face--front > p {
+    display: flex;
+    justify-content: flex-start;
+    font: 1.2rem 'Luckiest Guy', cursive, sans-serif;
 }
 
 .card__face--back {
-background: rgb(32, 14, 110);
-transform: rotateY(180deg);
+    background: rgb(32, 14, 110);
+    transform: rotateY(180deg);
 }
 
-  .card.is-flipped {
-      transform: rotateY(180deg);
+.card.is-flipped {
+    transform: rotateY(180deg);
   }
 
 img { 
-padding-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(#08c5f5, #0c1474);
+    border: 2mm ridge rgb(226, 176, 11);
 }
