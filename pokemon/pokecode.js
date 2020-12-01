@@ -27,8 +27,14 @@ const newPokemonButton = document.querySelector('.newPokemon')
 
 newPokemonButton.addEventListener('click', () => {
   let pokeName = prompt("What is your new Pokemon's name?")
-  let newPokemon = new Pokemon(pokeName, 111, 800, ['gorge', 'sleep', 'argue'] )
-  console.log(newPokemon)
+  let newPokemon = new Pokemon(
+    pokeName, 
+    'fire',
+    111, 
+    800, 
+    ['gorge', 'sleep', 'argue'],
+    ['eat', 'study', 'code'])
+  populatePokeCard(newPokemon)
 })
 
 LoadButton.addEventListener('click', () => {
@@ -71,16 +77,27 @@ function populateCardBack(pokemon) {
   pokeBack.className = 'card__face card__face--back'
   let backLabel = document.createElement('p')
   backLabel.textContent = `${pokemon.moves.length} potential moves`
-  backLabel.addEventListener('click', () => {
-    getMovesDetails(pokemon.moves)
-  })
+  backLabel.addEventListener('click', () => getMovesDetails(pokemon.moves))
   pokeBack.appendChild(backLabel)
   return pokeBack
 }
 
 function getMovesDetails(pokemonMoves) {
-  const movesUrl = pokemonMoves[0].move.url
-  return getAPIData(movesUrl).then((data) => data.contest_type.name)
+  
+  const nonNullMoves = pokemonMoves.map(async (move) => {
+    if(!move.move) return
+    const moveData = await getAPIData(move.move.url)
+    console.log(moveData.accuracy, moveData.power)
+     if ((moveData.accuracy && moveData.power) !== null) {
+       return moveData
+     }
+  })
+  console.log(nonNullMoves.length)
+
+  /* const result = pokemonMoves.reduce(async (acc, move) => {
+    const moveData = await getAPIData(move.move.url)
+    console.log(moveData.accuracy, moveData.power)
+  }, {}) */
 }
 
 function getImageFileName(pokemon) {
@@ -94,10 +111,12 @@ function getImageFileName(pokemon) {
   return `pokeball`
 }
 
-function Pokemon(name, height, weight, abilities) {
+function Pokemon(name, type, height, weight, abilities, moves) {
   this.name = name
+  this.type = type
   this.height = height
   this.weight = weight
   this.abilities = abilities
   this.id = 900
+  this.moves = moves
 }
