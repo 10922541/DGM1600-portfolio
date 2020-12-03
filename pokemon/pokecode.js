@@ -29,7 +29,6 @@ newPokemonButton.addEventListener('click', () => {
   let pokeName = prompt("What is your new Pokemon's name?")
   let newPokemon = new Pokemon(
     pokeName, 
-    'fire',
     111, 
     800, 
     ['gorge', 'sleep', 'argue'],
@@ -61,13 +60,13 @@ function populateCardFront(pokemon) {
   pokeFront.className = 'card__face card__face--front'
   let frontLabel = document.createElement('h3')
   frontLabel.textContent = pokemon.name
-  let frontTypes = document.createElement('p')
-  frontTypes.textContent = pokemon.types[0].type.name
-  // console.log(pokemon.types[0].type.name)
+  // --- let frontTypes = document.createElement('p')
+  // --- frontTypes.textContent = pokemon.types[0].type.name
+  // --- console.log(pokemon.types[0].type.name)
   let frontImage = document.createElement('img')
   frontImage.src = `../images/pokemon/${getImageFileName(pokemon)}.png`
   pokeFront.appendChild(frontImage)
-  pokeFront.appendChild(frontTypes)
+  // --- pokeFront.appendChild(frontTypes)
   pokeFront.appendChild(frontLabel)
   return pokeFront
 }
@@ -108,12 +107,11 @@ function getImageFileName(pokemon) {
   } else if (pokemon.id > 99 && pokemon.id < 810) {
     return `${pokemon.id}`
   }
-  return `pokeball`
+  return `../Poke_Ball`
 }
 
-function Pokemon(name, type, height, weight, abilities, moves) {
+function Pokemon(name, height, weight, abilities, moves) {
   this.name = name
-  this.type = type
   this.height = height
   this.weight = weight
   this.abilities = abilities
