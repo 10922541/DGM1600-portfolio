@@ -54,7 +54,7 @@ function getSimplifiedSenators(senatorArray) {
 
 const filterSenators = (prop, value) => {
     return getSimplifiedSenators(senators).filter(senator => {
-        return senator[prpo] === value
+        return senator[prop] === value
     })
 }
 
