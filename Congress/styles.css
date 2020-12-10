@@ -1,11 +1,52 @@
 body {
-    background-color: #cecece;
+    background-color: #26262e;
 }
 
 header {
     text-align: center;
 }
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+button {
+    padding: 1rem;
+    margin: 0 3rem 1rem 3rem;
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: rgb(73, 67, 67);
+}
+
+button:hover {
+    background-color: rgb(128, 122, 122);
+    transition: 0.2s ease-out;
+}
+
 .senatorGrid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.senatorGrid figure{
+    background-color: rgb(174, 178, 199);
+    border: solid 4px black;
+    border-radius: 30px 0;
+    overflow: hidden;
+}
+.senatorGrid img {
+    border-bottom: solid 4px black;
+}
+
+.senatorGrid figcaption {
+    font-family: sans-serif;
+    padding: 1rem;
+
+}
+
+.senatorGrid figcaption i{
+    float: right;
 }

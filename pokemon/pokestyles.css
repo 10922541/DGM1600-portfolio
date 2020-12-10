@@ -10,8 +10,29 @@ also ask how hard to change background color depending on type
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-
+ html {
+    background-color: lightslategray;
+    height: 100%;
+ }
+ h1 {
+    font: 4rem 'Luckiest Guy', cursive, sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 4px rgb(0, 0, 0); 
+    margin: 20px;
+ }
+button {
+    padding: 1em;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(33, 19, 223);
+}
+button:hover {
+    background-color: rgb(221, 18, 18);
+}
 header {
     display: flex;
     flex-direction: column;
