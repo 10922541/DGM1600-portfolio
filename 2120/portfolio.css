@@ -1,0 +1,382 @@
+/* --- COLORS --- */
+
+:root {
+    --dark-grey: #1b1b1b;
+    --medium-grey: #727273;
+    --light-grey: #c9c9c9;
+    --main-blue: #07bfc2;
+    --almost-black: #0d0d0d;
+}
+
+
+/* CSS reset */
+
+body, p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0; 
+    
+}
+
+
+/* box model fix here */
+
+*{
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+
+
+
+
+
+
+
+/* --- BODY --- */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    background-color: var(--almost-black);
+    color: var(--light-grey);
+    margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* --- NAV --- */
+
+nav {
+    background-color: white;
+    font-family: 'TEKO', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0;
+    letter-spacing: -1px;
+    margin-left: -15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;  
+}
+
+nav ul.menu li {
+    float: right;
+    
+}
+
+nav ul.menu li a {
+    display: block;
+    padding: 16px 40px;
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+
+nav ul.menu li a:hover {
+    color: var(--main-blue);
+    transition: color 0.3s ease-out;
+}
+
+nav ul.menu li.active a {
+    color: var(--main-blue);
+    text-decoration: line-through;
+}
+
+nav ul.menu li a.home{
+    padding: 1em 2em 0 3em; 
+}
+nav ul.menu li.logo {float: left;}
+nav ul.menu li.logo img{
+    max-height: 25px;
+}
+
+
+
+
+
+
+
+
+
+/* --- MAIN --- */
+
+main h1 {
+    font-size: 2rem;
+    color: var(--main-blue);
+    border-bottom: 1px solid var(--dark-grey);
+    margin-bottom: .4rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    color: var(--medium-grey);
+    margin-bottom: .2rem;
+}
+
+
+main p {
+    padding-bottom: .8rem;
+    line-height: 150%;
+}
+
+main a {
+    color: var(--light-grey);
+    text-decoration: none;
+}
+ main a:hover {
+    color: var(--main-blue);
+    transition: color 0.3s ease-out;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main a.store {
+     color: var(--medium-grey);
+     text-decoration: underline;
+}
+main a.store:hover {
+     color: var(--main-blue)
+}
+
+
+
+main div.drawings {
+    margin: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main div.drawings figcaption {
+    color: var(--medium-grey);
+    background-color:var(--dark-grey);
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* --- LISTS --- */
+
+main ul.check, main ul.blank {
+    margin: 0 0 .8rem 0;
+    padding: 0 0 0 1rem;
+}
+main ul.check {
+    list-style-type: square;
+}
+
+main ul.blank {
+    list-style-type: circle;
+}
+
+main dl dt {
+    margin: 0;
+    font-weight: 600;
+    padding: 0 0 .5em 1rem;
+}
+
+main dl dd {
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+
+
+
+
+
+
+
+
+/* --- IMAGES --- */
+
+figure.snowboard {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+}
+
+figure.snowboard img {
+    width: 50vw;
+}
+
+figure.shirt {
+    float: right;
+    margin: 10px 2%;
+}
+
+figure.shirt figcaption{
+    color: var(--medium-grey);
+    background-color:var(--dark-grey);
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* --- FORM STYLING --- */
+
+
+form.contactForm fieldset{
+    /* font-family: "TEKO", sans-serif; */
+    text-transform: uppercase;
+    border: 1px solid var(--dark-grey);
+    border-radius: .5rem;
+    padding: 1rem 2%;
+    margin-left: 1%;
+    margin-bottom: 2rem;
+}
+form.contactForm legend{
+    margin-left: 2%;
+    font-size: .7rem;
+    color: var(--main-blue);
+    font-weight: 900;
+}
+form.contactForm label {
+    display: block;   
+}
+form.contactForm span {
+    display: block;
+    padding: 1.2rem 0 .2rem .4rem;
+    color: var(--light-grey);
+    font-size: .9rem;
+}
+form.contactForm .myInput {
+    color: white;
+    background-color: var(--dark-grey);
+    border: none;
+    padding: .4rem;
+    border-radius: .3rem;
+    width: 30%;
+}
+form.contactForm .OS {
+    color: gray;
+    background-color: var(--dark-grey);
+    border: none;
+    text-transform: none;
+    padding: .4rem;
+    border-radius: .3rem;
+    width: 30%;
+}
+form.contactForm .submitbutton {
+    background-color: var(--main-blue);
+    color: var(--almost-black);
+    font-family: "TEKO", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    border: none;
+}
+form.contactForm .textfield {
+    border: none;
+    border-radius: .5rem;
+    background-color: #1b1b1b;
+    display: block;
+    width: 30%;
+    height: 6rem;
+}
+#reasons {
+    text-transform: none;
+    color: gray;
+    font-size: .8rem;
+}
+
+#doing {
+    text-transform: none;
+    color: gray;
+    font-size: .8rem;
+}
+
+
+
+
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1f1f1f;
+}
+footer p {
+    text-align: center;
+    color: white;
+    padding: .5rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- OTHER --- */
+
+.keepOpen {
+    clear: both;
+}
+
+#top, #bottom, #left, #right {
+	background: white;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+        #bottom { bottom: 0; }
+        
+       

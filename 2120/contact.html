@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    <title>Boston's Portfolio: About Page</title>
+</head>
+
+<body>
+
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+
+    <!-- Start of the navigation -->
+    <nav>
+        <ul class="menu">
+            <!-- <li><a href="store.html">STORE</a></li>   WIP-->
+            <li class="active"><a href="contact.html">CONTACT</a></li>
+            <li><a href="portfolio.html">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li class="logo"><a href="index.html" class="home"><img src="images/logo-small.png" alt="my logo"></a></li>
+        </ul>
+        <div class="keepOpen"></div>
+    </nav>
+
+
+    <!-- Start of the main content -->
+    <main>
+        <!-- Start of Form -->
+
+        <h1>CONTACT ME</h1>
+        <form action="thanks.html" method="post" enctype="multipart/form-data" name="contactMe" class="contactForm">
+
+            <input type="hidden" name="website1" value="bluehost">
+            <input type="hidden" name="website2" value="netlify">
+
+            <fieldset>
+                <legend>PERSONAL INFO</legend>
+                <label><span>First Name:</span><input name="first" type="text" required class="myInput" placeholder="John"> </label>
+                <label><span>Last Name:</span><input name="last" type="text" placeholder="Smith (optional)"
+                        class="myInput"></label>
+
+            </fieldset>
+            <fieldset>
+                <legend>CONTACT INFO</legend>
+                <label><span>Email Address:</span><input type="email" name="email" required class="myInput" placeholder="example@google.com"> </label>
+                <label><span>Phone Number:</span><input type="tel" name="num" placeholder="(123) 456-789" pattern=[0-9-.() ]
+                        {10,15} class="myInput"> </label>
+
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>ABOUT YOU</legend>
+
+                
+                    <span>How are you doing today?</span>
+                    <div id="doing">
+                    <label><input type="radio" name="feels" value="good">Good!</label>
+                    <label><input type="radio" name="feels" value="meh">Meh...</label>
+                    <label><input type="radio" name="feels" value="bad">Not Great</label>
+                </div>
+                <span>Which do you prefer?</span>
+                <select name="choice" class="OS"> 
+                    <option>PC</option>
+                    <option value="Incorrect">MAC</option>
+                    <option>Other</option>
+                </select>
+
+                <span>Favorite Number: </span><input type="text" name="favnum" value="" required pattern="[0-9]{1,3}"
+                    class="myInput" placeholder="(between 0 & 100)">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>COMMENTS</legend>
+
+                    <span>What is your reasoning for contacting me?</span>
+                    <div id="reasons">
+                    <label><input type="checkbox" name="question" value="question"> Question</label>
+                    <label><input type="checkbox" name="comment" value="comment"> Comment</label>
+                    <label><input type="checkbox" name="comission" value="comission"> Comission</label>
+                    <label><input type="checkbox" name="work" value="work"> Work</label>
+                </div>
+
+                <span>Comments / Quesitons:</span>
+                <textarea name="comments" class="textfield"></textarea>
+
+
+                <input type="submit" name="submit" value="SEND" class="submitbutton">
+
+            </fieldset>
+
+
+        </form>
+
+
+
+    </main>
+
+    <!-- Start of the footer -->
+    <footer>
+        <p>&copy; 9/14/2020 &bull; Utah Valley University &bull; Built by Boston Misner </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
