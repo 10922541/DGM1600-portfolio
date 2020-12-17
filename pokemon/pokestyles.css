@@ -1,11 +1,3 @@
-/* ask thor about  
-getting all types
-aligning types to the left 
-weird space under type names
-also ask how hard to change background color depending on type
-*/
-
-
 * {
     margin: 0;
     padding: 0;
@@ -51,7 +43,6 @@ header {
     height: 360px;
     margin: 10px;
     perspective: 600px;
-  
   }
 
 .card {
@@ -61,6 +52,7 @@ header {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    
   }
 
 .card__face {
@@ -73,6 +65,7 @@ header {
     backface-visibility: hidden;
     border-radius: 20px;
     border: 8px solid rgb(2247, 206, 5);  
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 .card__face--front {
