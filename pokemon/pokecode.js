@@ -10,7 +10,7 @@ async function getAPIData(url) {
 }
 // ?limt=25&offset=458 <-group of 25 not starting at 0
 function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon`).then(
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
     async (data) => {
       for (const pokemon of data.results) {
         await getAPIData(pokemon.url).then((pokeData) => {
@@ -86,12 +86,12 @@ function getMovesDetails(pokemonMoves) {
   const nonNullMoves = pokemonMoves.map(async (move) => {
     if(!move.move) return
     const moveData = await getAPIData(move.move.url)
-    console.log(moveData.accuracy, moveData.power)
+    // console.log(moveData.accuracy, moveData.power)
      if ((moveData.accuracy && moveData.power) !== null) {
        return moveData
      }
   })
-  console.log(nonNullMoves.length)
+  // console.log(nonNullMoves.length)
 
   /* const result = pokemonMoves.reduce(async (acc, move) => {
     const moveData = await getAPIData(move.move.url)
